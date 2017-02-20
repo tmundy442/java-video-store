@@ -3,22 +3,24 @@ public class VideoStoreApp {
 
 	public static void main(String[] args) {
 
-		RentalCalculator calculator = new RentalCalculator();
-		Movie regular = new Movie("WCCI", "regular");
-		Movie childrens = new Movie("Up", "childrens");
-		Movie newRelease = new Movie("Dr Strnage", "new release");
+		RentalStatement statement = new RentalStatement();//create new Rental Statement object 
+														  //called 'statement'
 		
-		System.out.println("amount due = " + calculator.calculate(regular, 2));
-		System.out.println("amount due = " + calculator.calculate(regular, 3));
-		System.out.println("amount due = " + calculator.calculate(regular, 5));
+		//create new movies of "Movie type
+		Movie regular = new Regular("Star Wars");
+		Movie childrens = new Childrens("Disney's Jungle Book");
+		Movie newRelease = new NewRelease("Dr. Strange");
 		
-		System.out.println("amount due = " + calculator.calculate(childrens, 3));
-		System.out.println("amount due = " + calculator.calculate(childrens, 4));
-		System.out.println("amount due = " + calculator.calculate(childrens, 5));
-
-		System.out.println("amount due = " + calculator.calculate(newRelease, 1));
-		System.out.println("amount due = " + calculator.calculate(newRelease, 5));
-
+		//create new rentals and give the number of days rented
+		Rental regularMovie = new Rental(regular, 2);
+		Rental childrensMovie = new Rental(childrens, 2);
+		Rental newreleaseMovie = new Rental(newRelease, 2);
+		
+		//add the movies to the collection in the RentalStatement class and print rental statement
+		statement.add(regularMovie);
+		statement.add(childrensMovie);
+		statement.add(newreleaseMovie);
+		statement.print();	
 		
 	}
 

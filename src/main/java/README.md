@@ -1,0 +1,4 @@
+Video Store
+Tom Mundy   2-20-2017
+
+This exercise represents a video store rental and uses the concept of inheritance. From the VideoStoreApp, three Movie objects are created, one title each of the Regular, Children's, and New Release subclasses. Next, objects of the Rental class are created, each showing the price code and number of days each movie is to be rented. One object of the RentalStatement class is created, and each movie is added to the statement with commands from the VideoStoreApp. Finally, the statement is printed, displaying the price code, title, number of days rented and cost of each movie entered. 
